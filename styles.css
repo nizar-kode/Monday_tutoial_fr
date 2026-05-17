@@ -417,7 +417,7 @@ body {
   .nav a { padding: 8px 12px; font-size: 0.78rem; }
   .nav-progress { padding-top: 12px; }
 
-  .main { margin-left: 0; padding-top: 0; }
+  .main { margin-left: 0; padding-top: 60px; }
   .section { padding: 36px 24px 48px; }
   .hero { padding: 48px 24px; border-radius: 0; }
   .hero-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -447,28 +447,34 @@ body {
 @media (max-width: 768px) {
   html { font-size: 15px; }
 
-  /* Nav: compact vertical list with hamburger */
+  /* Nav: fixed top bar with hamburger */
   .nav {
-    position: sticky;
-    top: 0;
-    padding: 14px 16px;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    padding: 12px 16px;
     gap: 2px;
+    z-index: 300;
+    overflow-y: auto;
   }
   .nav-toggle { display: flex; }
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
+    padding-top: 8px;
   }
   .nav-links.open { display: flex; }
-  .nav-sub { margin-bottom: 8px; font-size: 0.65rem; }
+  .nav-sub { margin-bottom: 0; font-size: 0.65rem; }
   .nav a {
     padding: 9px 12px;
     font-size: 0.76rem;
     min-height: 40px; /* touch target */
   }
 
-  .main { margin-left: 0; }
+  .main { margin-left: 0; padding-top: 60px; }
   .section { padding: 28px 16px 40px; }
 
   /* Hero */
