@@ -455,3 +455,30 @@ body {
 .auto-block.when { background: var(--purple-light); color: var(--primary); }
 .auto-block.then { background: var(--green-light); color: #0A6B3D; }
 .auto-arrow { font-size: 1.5rem; color: var(--grey-2); }
+
+/* ===== SIGNATURE FOOTER ===== */
+.signature {
+  max-width: 1100px; margin: 0 auto;
+  padding: 40px 56px 60px;
+  text-align: center;
+}
+.signature-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  margin-bottom: 32px;
+}
+.signature-content {
+  display: inline-flex; align-items: center; gap: 18px;
+  margin-bottom: 12px;
+}
+.signature-avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white; display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 1.1rem; letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(97,97,255,0.3);
+}
+.signature-name { font-size: 1.15rem; font-weight: 800; color: var(--dark); }
+.signature-role { font-size: 0.85rem; color: var(--grey-1); font-weight: 500; }
+.signature-company { font-size: 0.85rem; color: var(--primary); font-weight: 700; }
+.signature-date { font-size: 0.75rem; color: var(--grey-2); margin-top: 8px; }
