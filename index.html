@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide Onboarding monday.com</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo"><span>monday</span>.com</div>
+  <div class="nav-sub">Guide d'onboarding</div>
+  <a href="#intro" data-section="intro"><span class="nav-num">1</span> Introduction</a>
+  <a href="#glossaire" data-section="glossaire"><span class="nav-num">2</span> Terminologie</a>
+  <a href="#hierarchie" data-section="hierarchie"><span class="nav-num">3</span> Hiérarchie</a>
+  <a href="#projet" data-section="projet"><span class="nav-num">4</span> Premier projet</a>
+  <a href="#vues" data-section="vues"><span class="nav-num">5</span> Les vues</a>
+  <a href="#auto" data-section="auto"><span class="nav-num">6</span> Automatisations</a>
+  <a href="#dash" data-section="dash"><span class="nav-num">7</span> Dashboards</a>
+  <a href="#exemple" data-section="exemple"><span class="nav-num">8</span> Exemple réel</a>
+  <a href="#erreurs" data-section="erreurs"><span class="nav-num">9</span> Erreurs fréquentes</a>
+  <a href="#cheat" data-section="cheat"><span class="nav-num">10</span> Résumé rapide</a>
+  <div class="nav-progress">
+    <div class="nav-progress-label">Progression</div>
+    <div class="nav-progress-bar"><div class="nav-progress-fill"></div></div>
+  </div>
+</nav>
+
+<main class="main">
+
+<!-- ========== 1. HERO / INTRO ========== -->
+<section class="hero" id="intro">
+  <div class="hero-grid">
+    <div>
+      <div class="section-badge">📘 Introduction</div>
+      <h1 class="section-title">Bienvenue sur monday.com</h1>
+      <p class="section-desc">monday.com = un espace unique pour organiser vos projets, tâches, équipes et délais. Simple, visuel et collaboratif.</p>
+      <div class="hero-cards">
+        <div class="hero-card">
+          <div class="hero-card-icon">📋</div>
+          <div class="hero-card-title">Organiser</div>
+          <div class="hero-card-text">Vos projets et tâches au même endroit</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">👥</div>
+          <div class="hero-card-title">Collaborer</div>
+          <div class="hero-card-text">Toute l'équipe voit l'avancement en temps réel</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">⚡</div>
+          <div class="hero-card-title">Automatiser</div>
+          <div class="hero-card-text">Gagnez du temps avec les automatisations</div>
+        </div>
+      </div>
+    </div>
+    <div><img src="images/hero.png" alt="Illustration collaboration" class="hero-img"></div>
+  </div>
+</section>
+
+<div class="section" style="padding-top:40px;padding-bottom:0">
+  <div class="callout">💡 <strong>Pourquoi les entreprises utilisent monday.com ?</strong><br>Centraliser l'information · Suivre les projets en temps réel · Réduire les réunions inutiles · Voir qui fait quoi et quand</div>
+</div>
+
+<!-- ========== 2. GLOSSAIRE ========== -->
+<section class="section" id="glossaire">
+  <div class="section-badge">📖 Section 2</div>
+  <h2 class="section-title">Terminologie monday.com</h2>
+  <p class="section-desc">Les termes essentiels expliqués simplement. Chaque concept en une phrase.</p>
+
+  <div class="glossary-grid">
+
+    <div class="glossary-card purple reveal"><div class="glossary-icon purple">🏢</div>
+      <div class="glossary-term">Workspace (Espace de travail)</div>
+      <div class="glossary-def">Le dossier principal qui regroupe tous vos tableaux par thème ou département.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Workspace « Marketing » contient tous les projets marketing.</div>
+    </div>
+
+    <div class="glossary-card blue reveal"><div class="glossary-icon blue">📊</div>
+      <div class="glossary-term">Board (Tableau)</div>
+      <div class="glossary-def">Le tableau principal où vit votre projet. C'est votre espace de travail quotidien.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Board « Lancement Produit 2026 »</div>
+    </div>
+
+    <div class="glossary-card green reveal"><div class="glossary-icon green">📁</div>
+      <div class="glossary-term">Group (Groupe)</div>
+      <div class="glossary-def">Une section colorée dans un tableau pour organiser les tâches par catégorie.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Groupes « Phase 1 », « Phase 2 », « Phase 3 »</div>
+    </div>
+
+    <div class="glossary-card orange reveal"><div class="glossary-icon orange">✅</div>
+      <div class="glossary-term">Item (Élément / Tâche)</div>
+      <div class="glossary-def">Une ligne dans votre tableau = une tâche, une action ou un livrable.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> « Créer le visuel Instagram »</div>
+    </div>
+
+    <div class="glossary-card red reveal"><div class="glossary-icon red">🔗</div>
+      <div class="glossary-term">Subitem (Sous-tâche)</div>
+      <div class="glossary-def">Une tâche imbriquée sous un item pour détailler les étapes.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Sous-tâche « Valider le texte » sous « Créer le visuel »</div>
+    </div>
+
+    <div class="glossary-card purple reveal"><div class="glossary-icon purple">📐</div>
+      <div class="glossary-term">Column (Colonne)</div>
+      <div class="glossary-def">Les informations associées à chaque tâche : statut, personne, date, etc.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Colonnes « Statut », « Responsable », « Échéance »</div>
+    </div>
+
+    <div class="glossary-card green reveal"><div class="glossary-icon green">🚦</div>
+      <div class="glossary-term">Status (Statut)</div>
+      <div class="glossary-def">Un indicateur coloré qui montre l'avancement d'une tâche.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> <span class="status-pill done">Terminé</span> <span class="status-pill working">En cours</span> <span class="status-pill stuck">Bloqué</span></div>
+    </div>
+
+    <div class="glossary-card blue reveal"><div class="glossary-icon blue">👤</div>
+      <div class="glossary-term">People (Personnes)</div>
+      <div class="glossary-def">La colonne pour assigner un ou plusieurs responsables à une tâche.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Assigner « Sarah M. » à la tâche design</div>
+    </div>
+
+    <div class="glossary-card orange reveal"><div class="glossary-icon orange">📅</div>
+      <div class="glossary-term">Timeline (Chronologie)</div>
+      <div class="glossary-def">Une barre visuelle montrant la date de début et de fin d'une tâche.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Du 1er au 15 juin 2026</div>
+    </div>
+
+    <div class="glossary-card purple reveal"><div class="glossary-icon purple">📈</div>
+      <div class="glossary-term">Dashboard (Tableau de bord)</div>
+      <div class="glossary-def">Une page avec des graphiques et KPIs pour suivre vos projets en un coup d'œil.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Dashboard « Suivi Trimestriel »</div>
+    </div>
+
+    <div class="glossary-card green reveal"><div class="glossary-icon green">⚡</div>
+      <div class="glossary-term">Automation (Automatisation)</div>
+      <div class="glossary-def">Une règle « Si… alors… » qui exécute des actions automatiquement.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> « Quand statut = Terminé → notifier le manager »</div>
+    </div>
+
+    <div class="glossary-card blue reveal"><div class="glossary-icon blue">🔌</div>
+      <div class="glossary-term">Integration (Intégration)</div>
+      <div class="glossary-def">Connecter monday.com à d'autres outils (Gmail, Slack, Teams…).</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Recevoir un email quand une tâche est assignée</div>
+    </div>
+
+    <div class="glossary-card orange reveal"><div class="glossary-icon orange">💬</div>
+      <div class="glossary-term">Update (Commentaire)</div>
+      <div class="glossary-def">Un fil de discussion attaché à chaque tâche pour communiquer en contexte.</div>
+      <div class="glossary-example"><strong>Exemple :</strong> « @Pierre peux-tu valider ce visuel ? »</div>
+    </div>
+
+    <div class="glossary-card red reveal"><div class="glossary-icon red">👁️</div>
+      <div class="glossary-term">View (Vue)</div>
+      <div class="glossary-def">Différentes façons de visualiser vos données : tableau, Kanban, calendrier…</div>
+      <div class="glossary-example"><strong>Exemple :</strong> Passer de la vue Tableau à la vue Kanban</div>
+    </div>
+
+    <div class="glossary-card purple reveal"><div class="glossary-icon purple">🔒</div>
+      <div class="glossary-term">Types de Boards</div>
+      <div class="glossary-def"><strong>Main Board</strong> = visible par tous · <strong>Private</strong> = sur invitation · <strong>Shareable</strong> = accessible aux invités externes</div>
+      <div class="glossary-example"><strong>Conseil :</strong> Commencez toujours par un Main Board</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== 3. HIÉRARCHIE ========== -->
+<section class="section" id="hierarchie">
+  <div class="section-badge">🏗️ Section 3</div>
+  <h2 class="section-title">Comprendre la hiérarchie</h2>
+  <p class="section-desc">monday.com s'organise en 5 niveaux. Pensez-y comme des dossiers imbriqués.</p>
+
+  <div class="tree reveal">
+    <div class="tree-level l1">
+      <div class="tree-icon">🏢</div>
+      <div><div class="tree-label">Workspace (Espace de travail)</div><div class="tree-example">Ex : « Mon Entreprise »</div></div>
+    </div>
+    <div class="tree-level l2">
+      <span class="tree-arrow">↳</span>
+      <div class="tree-icon">📊</div>
+      <div><div class="tree-label">Board (Tableau)</div><div class="tree-example">Ex : « Marketing »</div></div>
+    </div>
+    <div class="tree-level l3">
+      <span class="tree-arrow">↳</span>
+      <div class="tree-icon">📁</div>
+      <div><div class="tree-label">Group (Groupe)</div><div class="tree-example">Ex : « Mai 2026 »</div></div>
+    </div>
+    <div class="tree-level l4">
+      <span class="tree-arrow">↳</span>
+      <div class="tree-icon">✅</div>
+      <div><div class="tree-label">Item (Tâche)</div><div class="tree-example">Ex : « Campagne Instagram »</div></div>
+    </div>
+    <div class="tree-level l5">
+      <span class="tree-arrow">↳</span>
+      <div class="tree-icon">🔗</div>
+      <div><div class="tree-label">Subitem (Sous-tâche)</div><div class="tree-example">Ex : « Créer le visuel »</div></div>
+    </div>
+  </div>
+
+  <div class="annotated-img reveal">
+    <img src="images/hierarchy.png" alt="Diagramme hiérarchie monday.com">
+  </div>
+</section>
+
+<!-- ========== 4. PREMIER PROJET ========== -->
+<section class="section" id="projet">
+  <div class="section-badge">🚀 Section 4</div>
+  <h2 class="section-title">Créer votre premier projet</h2>
+  <p class="section-desc">Suivez ces étapes pour mettre en place un vrai projet. Exemple : « Lancement Produit 2026 ».</p>
+
+  <div class="steps">
+
+    <div class="step reveal">
+      <div class="step-content">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Créer un Workspace</h3>
+        <p class="step-text">Cliquez sur <strong>« + »</strong> dans la barre latérale gauche, puis <strong>« Nouveau workspace »</strong>. Nommez-le selon votre département ou projet.</p>
+        <div class="step-action">📍 Barre latérale → « + » → Workspace</div>
+      </div>
+      <div>
+        <div class="mockup"><div class="mockup-bar"><span class="mockup-dot r"></span><span class="mockup-dot y"></span><span class="mockup-dot g"></span></div>
+        <div class="mockup-body" style="padding:24px;background:var(--grey-4)">
+          <div style="display:flex;gap:12px;align-items:center;padding:12px 16px;background:var(--primary);color:white;border-radius:8px;font-weight:700;font-size:0.9rem;cursor:pointer">➕ Nouveau Workspace</div>
+          <div style="margin-top:16px;padding:16px;background:white;border-radius:8px;border:2px dashed var(--primary)">
+            <div style="font-size:0.8rem;color:var(--grey-1)">Nom du workspace :</div>
+            <div style="font-weight:700;font-size:1.1rem;color:var(--dark);margin-top:4px">Mon Entreprise</div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-content">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Créer un Board (Tableau)</h3>
+        <p class="step-text">Dans votre workspace, cliquez <strong>« + Ajouter »</strong> → <strong>« Nouveau Board »</strong>. Choisissez un nom clair et descriptif.</p>
+        <div class="step-action">📍 Workspace → « + Ajouter » → Board</div>
+      </div>
+      <div>
+        <div class="mockup"><div class="mockup-bar"><span class="mockup-dot r"></span><span class="mockup-dot y"></span><span class="mockup-dot g"></span></div>
+        <div class="mockup-body" style="padding:24px;background:var(--grey-4)">
+          <div style="font-weight:800;font-size:1.2rem;color:var(--dark);margin-bottom:12px">📊 Lancement Produit 2026</div>
+          <div style="font-size:0.8rem;color:var(--grey-1)">Type : Main Board (visible par toute l'équipe)</div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-content">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Ajouter des Groupes</h3>
+        <p class="step-text">Les groupes organisent vos tâches par phase, mois ou catégorie. Cliquez <strong>« + Ajouter un groupe »</strong>.</p>
+        <div class="step-action">📍 En haut du board → « + Groupe »</div>
+      </div>
+      <div>
+        <div class="mockup"><div class="mockup-bar"><span class="mockup-dot r"></span><span class="mockup-dot y"></span><span class="mockup-dot g"></span></div>
+        <div class="mockup-body" style="padding:0">
+          <div style="background:var(--primary);color:white;padding:10px 16px;font-weight:700;font-size:0.85rem">📁 Phase 1 — Préparation</div>
+          <div style="background:var(--green);color:white;padding:10px 16px;font-weight:700;font-size:0.85rem">📁 Phase 2 — Exécution</div>
+          <div style="background:var(--orange);color:white;padding:10px 16px;font-weight:700;font-size:0.85rem">📁 Phase 3 — Suivi</div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-content">
+        <div class="step-num">4</div>
+        <h3 class="step-title">Ajouter des tâches (Items)</h3>
+        <p class="step-text">Cliquez <strong>« + Ajouter un élément »</strong> en bas de chaque groupe. Chaque ligne = une tâche à réaliser.</p>
+        <div class="step-action">📍 Bas du groupe → « + Élément »</div>
+      </div>
+      <div>
+        <div class="mockup"><div class="mockup-bar"><span class="mockup-dot r"></span><span class="mockup-dot y"></span><span class="mockup-dot g"></span></div>
+        <div class="mockup-body" style="padding:0">
+          <table class="board-mock">
+            <tr class="group-row"><td colspan="4">Phase 1 — Préparation</td></tr>
+            <tr><td>Étude de marché</td><td><span class="status-pill done">Terminé</span></td><td><span class="avatar" style="background:var(--primary)">SM</span></td><td>1-10 juin</td></tr>
+            <tr><td>Brief créatif</td><td><span class="status-pill working">En cours</span></td><td><span class="avatar" style="background:var(--orange)">PL</span></td><td>5-12 juin</td></tr>
+            <tr><td>Validation budget</td><td><span class="status-pill stuck">Bloqué</span></td><td><span class="avatar" style="background:var(--green)">AM</span></td><td>8-15 juin</td></tr>
+          </table>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-content">
+        <div class="step-num">5</div>
+        <h3 class="step-title">Assigner et planifier</h3>
+        <p class="step-text">Cliquez sur la colonne <strong>Personne</strong> pour assigner un responsable, et sur <strong>Timeline</strong> pour définir les dates.</p>
+        <div class="step-action">📍 Cliquer sur la cellule → Choisir</div>
+      </div>
+      <div>
+        <div class="mockup"><div class="mockup-bar"><span class="mockup-dot r"></span><span class="mockup-dot y"></span><span class="mockup-dot g"></span></div>
+        <div class="mockup-body" style="padding:24px;background:var(--grey-4)">
+          <div style="display:flex;gap:16px;align-items:center;margin-bottom:12px">
+            <div style="font-weight:600;font-size:0.85rem">👤 Responsable :</div>
+            <span class="avatar" style="background:var(--primary)">SM</span>
+            <span style="font-size:0.85rem">Sarah M.</span>
+          </div>
+          <div style="display:flex;gap:16px;align-items:center">
+            <div style="font-weight:600;font-size:0.85rem">📅 Période :</div>
+            <div style="background:var(--blue);color:white;padding:6px 16px;border-radius:20px;font-size:0.8rem;font-weight:600">1 juin → 15 juin</div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="annotated-img reveal">
+    <img src="images/board.png" alt="Mockup Board monday.com" style="width:100%;border-radius:16px;box-shadow:var(--shadow-lg)">
+  </div>
+</section>
+
+<!-- ========== 5. LES VUES ========== -->
+<section class="section" id="vues">
+  <div class="section-badge">👁️ Section 5</div>
+  <h2 class="section-title">Les meilleures vues pour débuter</h2>
+  <p class="section-desc">Changez de vue pour voir vos données différemment. Même données, perspectives différentes.</p>
+
+  <div class="views-grid">
+    <div class="view-card reveal">
+      <div class="view-card-img">📊</div>
+      <div class="view-card-body">
+        <div class="view-card-name">Vue Tableau (Table View)</div>
+        <div class="view-card-desc">La vue par défaut. Comme un tableur amélioré avec colonnes personnalisables.</div>
+        <span class="view-tag beginner">⭐ Débutant</span>
+        <div style="font-size:0.8rem;color:var(--grey-1);margin-top:10px">✅ Idéal pour : gestion quotidienne des tâches</div>
+      </div>
+    </div>
+    <div class="view-card reveal">
+      <div class="view-card-img">🗂️</div>
+      <div class="view-card-body">
+        <div class="view-card-name">Vue Kanban</div>
+        <div class="view-card-desc">Des cartes organisées en colonnes (À faire → En cours → Terminé).</div>
+        <span class="view-tag beginner">⭐ Débutant</span>
+        <div style="font-size:0.8rem;color:var(--grey-1);margin-top:10px">✅ Idéal pour : suivre l'avancement visuel</div>
+      </div>
+    </div>
+    <div class="view-card reveal">
+      <div class="view-card-img">📅</div>
+      <div class="view-card-body">
+        <div class="view-card-name">Vue Calendrier (Calendar)</div>
+        <div class="view-card-desc">Vos tâches affichées sur un calendrier mensuel ou hebdomadaire.</div>
+        <span class="view-tag beginner">⭐ Débutant</span>
+        <div style="font-size:0.8rem;color:var(--grey-1);margin-top:10px">✅ Idéal pour : planifier et voir les deadlines</div>
+      </div>
+    </div>
+    <div class="view-card reveal">
+      <div class="view-card-img">📏</div>
+      <div class="view-card-body">
+        <div class="view-card-name">Vue Timeline (Chronologie)</div>
+        <div class="view-card-desc">Barres horizontales montrant la durée de chaque tâche dans le temps.</div>
+        <span class="view-tag intermediate">📙 Intermédiaire</span>
+        <div style="font-size:0.8rem;color:var(--grey-1);margin-top:10px">✅ Idéal pour : planification de projets complexes</div>
+      </div>
+    </div>
+    <div class="view-card reveal">
+      <div class="view-card-img">📉</div>
+      <div class="view-card-body">
+        <div class="view-card-name">Vue Gantt</div>
+        <div class="view-card-desc">Vue avancée avec dépendances entre les tâches et chemin critique.</div>
+        <span class="view-tag advanced">🔴 Avancé</span>
+        <div style="font-size:0.8rem;color:var(--grey-1);margin-top:10px">✅ Idéal pour : gestion de projet avancée</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="annotated-img reveal" style="margin-top:32px">
+    <img src="images/kanban.png" alt="Vue Kanban" style="width:100%;border-radius:16px;box-shadow:var(--shadow-lg)">
+  </div>
+</section>
+
+<!-- ========== 6. AUTOMATISATIONS ========== -->
+<section class="section" id="auto">
+  <div class="section-badge">⚡ Section 6</div>
+  <h2 class="section-title">Les automatisations simplifiées</h2>
+  <p class="section-desc">Les automatisations font le travail répétitif à votre place. Aucun code requis !</p>
+
+  <div class="callout">💡 Une automatisation = une règle simple : <strong>« QUAND quelque chose se passe → ALORS faire une action »</strong></div>
+
+  <div class="auto-flow reveal">
+    <div class="auto-block when">🔔 QUAND<br><small>Le statut change</small></div>
+    <div class="auto-arrow">→</div>
+    <div class="auto-block then">✉️ ALORS<br><small>Notifier le manager</small></div>
+  </div>
+  <div class="auto-flow reveal">
+    <div class="auto-block when">📅 QUAND<br><small>La date arrive</small></div>
+    <div class="auto-arrow">→</div>
+    <div class="auto-block then">🔴 ALORS<br><small>Changer le statut en « Urgent »</small></div>
+  </div>
+  <div class="auto-flow reveal">
+    <div class="auto-block when">✅ QUAND<br><small>Toutes les sous-tâches = Terminé</small></div>
+    <div class="auto-arrow">→</div>
+    <div class="auto-block then">🎉 ALORS<br><small>Marquer l'item comme Terminé</small></div>
+  </div>
+
+  <div class="annotated-img reveal">
+    <img src="images/automation.png" alt="Flux d'automatisation" style="width:100%;border-radius:16px;box-shadow:var(--shadow-lg)">
+  </div>
+
+  <h3 style="margin-top:32px;font-size:1.1rem;font-weight:700;color:var(--dark)">🏆 Top 5 automatisations pour débuter</h3>
+  <div class="cheat-grid" style="margin-top:16px">
+    <div class="cheat-item reveal"><div class="cheat-icon" style="background:var(--purple-light)">1️⃣</div><div><div class="cheat-label">Notification de statut</div><div class="cheat-val">Quand le statut change → notifier la personne assignée</div></div></div>
+    <div class="cheat-item reveal"><div class="cheat-icon" style="background:var(--green-light)">2️⃣</div><div><div class="cheat-label">Rappel de deadline</div><div class="cheat-val">Quand la date arrive → envoyer un rappel</div></div></div>
+    <div class="cheat-item reveal"><div class="cheat-icon" style="background:var(--orange-light)">3️⃣</div><div><div class="cheat-label">Déplacer un item</div><div class="cheat-val">Quand statut = Terminé → déplacer vers le groupe « Archivé »</div></div></div>
+    <div class="cheat-item reveal"><div class="cheat-icon" style="background:var(--blue-light)">4️⃣</div><div><div class="cheat-label">Assignation auto</div><div class="cheat-val">Quand un item est créé → assigner automatiquement à Pierre</div></div></div>
+    <div class="cheat-item reveal"><div class="cheat-icon" style="background:var(--red-light)">5️⃣</div><div><div class="cheat-label">Création de sous-tâches</div><div class="cheat-val">Quand un item est créé → créer les sous-tâches standard</div></div></div>
+  </div>
+</section>
+
+<!-- ========== 7. DASHBOARDS ========== -->
+<section class="section" id="dash">
+  <div class="section-badge">📈 Section 7</div>
+  <h2 class="section-title">Les Dashboards simplifiés</h2>
+  <p class="section-desc">Un dashboard = une page de suivi avec des graphiques pour tout voir en un coup d'œil.</p>
+
+  <div class="callout green">👔 <strong>Pour les managers :</strong> Le dashboard est votre meilleur outil. Sans ouvrir chaque board, vous voyez l'état de tous vos projets.</div>
+
+  <div class="annotated-img reveal">
+    <img src="images/dashboard.png" alt="Dashboard monday.com" style="width:100%;border-radius:16px;box-shadow:var(--shadow-lg)">
+  </div>
+
+  <h3 style="margin-top:32px;font-size:1.1rem;font-weight:700">🧩 Les widgets essentiels</h3>
+  <div class="glossary-grid" style="margin-top:16px">
+    <div class="glossary-card blue reveal"><div class="glossary-icon blue">🔢</div>
+      <div class="glossary-term">Widget Chiffres</div>
+      <div class="glossary-def">Affiche un KPI clé : nombre de tâches, % terminé, budget restant.</div>
+    </div>
+    <div class="glossary-card green reveal"><div class="glossary-icon green">📊</div>
+      <div class="glossary-term">Widget Graphique</div>
+      <div class="glossary-def">Camembert ou barres pour visualiser la répartition des statuts.</div>
+    </div>
+    <div class="glossary-card orange reveal"><div class="glossary-icon orange">📅</div>
+      <div class="glossary-term">Widget Deadlines</div>
+      <div class="glossary-def">Liste les tâches en retard ou arrivant bientôt à échéance.</div>
+    </div>
+    <div class="glossary-card purple reveal"><div class="glossary-icon purple">👥</div>
+      <div class="glossary-term">Widget Charge d'équipe</div>
+      <div class="glossary-def">Montre qui est surchargé et qui a de la disponibilité.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 8. EXEMPLE RÉEL ========== -->
+<section class="section" id="exemple">
+  <div class="section-badge">🏢 Section 8</div>
+  <h2 class="section-title">Exemple réel d'entreprise</h2>
+  <p class="section-desc">Voici comment une PME de 50 personnes utilise monday.com au quotidien.</p>
+
+  <div class="dept-tabs">
+    <button class="dept-tab active" data-dept="dept-rh">👥 RH</button>
+    <button class="dept-tab" data-dept="dept-ventes">💰 Ventes</button>
+    <button class="dept-tab" data-dept="dept-it">💻 IT</button>
+    <button class="dept-tab" data-dept="dept-mkt">📣 Marketing</button>
+  </div>
+
+  <div id="dept-rh" class="dept-content active">
+    <div class="mockup"><div class="mockup-bar"><span class="mockup-dot r"></span><span class="mockup-dot y"></span><span class="mockup-dot g"></span></div>
+    <div class="mockup-body" style="padding:0">
+      <table class="board-mock">
+        <tr><th>📋 Board : Recrutement 2026</th><th>Statut</th><th>Responsable</th><th>Échéance</th></tr>
+        <tr class="group-row"><td colspan="4">📁 Postes ouverts</td></tr>
+        <tr><td>Développeur Full-Stack</td><td><span class="status-pill working">En cours</span></td><td><span class="avatar" style="background:#E44">RH</span></td><td>30 juin</td></tr>
+        <tr><td>Chef de projet</td><td><span class="status-pill done">Pourvu</span></td><td><span class="avatar" style="background:#579BFC">LC</span></td><td>15 mai</td></tr>
+        <tr class="group-row green"><td colspan="4">📁 Onboarding nouveaux</td></tr>
+        <tr><td>Formation monday.com</td><td><span class="status-pill todo">À faire</span></td><td><span class="avatar" style="background:#00CA72">SM</span></td><td>1 juin</td></tr>
+        <tr><td>Accès IT + Badge</td><td><span class="status-pill done">Terminé</span></td><td><span class="avatar" style="background:#FDAB3D">IT</span></td><td>28 mai</td></tr>
+      </table>
+    </div></div>
+    <div class="callout" style="margin-top:16px">⚡ <strong>Automatisation RH :</strong> Quand un poste passe à « Pourvu » → créer automatiquement les tâches d'onboarding</div>
+  </div>
+
+  <div id="dept-ventes" class="dept-content">
+    <div class="mockup"><div class="mockup-bar"><span class="mockup-dot r"></span><span class="mockup-dot y"></span><span class="mockup-dot g"></span></div>
+    <div class="mockup-body" style="padding:0">
+      <table class="board-mock">
+        <tr><th>📋 Board : Pipeline Ventes</th><th>Étape</th><th>Commercial</th><th>Montant</th></tr>
+        <tr class="group-row orange"><td colspan="4">📁 Prospects chauds</td></tr>
+        <tr><td>Société Dupont</td><td><span class="status-pill working">Négociation</span></td><td><span class="avatar" style="background:var(--primary)">JD</span></td><td>45 000 €</td></tr>
+        <tr><td>Groupe Martin</td><td><span class="status-pill done">Gagné</span></td><td><span class="avatar" style="background:var(--green)">ML</span></td><td>72 000 €</td></tr>
+        <tr class="group-row"><td colspan="4">📁 Prospects froids</td></tr>
+        <tr><td>StartupXYZ</td><td><span class="status-pill todo">Premier contact</span></td><td><span class="avatar" style="background:var(--orange)">PB</span></td><td>15 000 €</td></tr>
+      </table>
+    </div></div>
+  </div>
+
+  <div id="dept-it" class="dept-content">
+    <div class="mockup"><div class="mockup-bar"><span class="mockup-dot r"></span><span class="mockup-dot y"></span><span class="mockup-dot g"></span></div>
+    <div class="mockup-body" style="padding:0">
+      <table class="board-mock">
+        <tr><th>📋 Board : Tickets IT</th><th>Priorité</th><th>Assigné</th><th>Statut</th></tr>
+        <tr class="group-row" style="background:var(--red)"><td colspan="4">📁 Urgent</td></tr>
+        <tr><td>Serveur email lent</td><td><span class="status-pill stuck">🔴 Haute</span></td><td><span class="avatar" style="background:var(--dark)">KR</span></td><td><span class="status-pill working">En cours</span></td></tr>
+        <tr class="group-row green"><td colspan="4">📁 Normal</td></tr>
+        <tr><td>Installer Office 365</td><td><span class="status-pill todo">🟡 Moyenne</span></td><td><span class="avatar" style="background:var(--blue)">TA</span></td><td><span class="status-pill todo">À faire</span></td></tr>
+        <tr><td>Mise à jour antivirus</td><td><span class="status-pill done">🟢 Basse</span></td><td><span class="avatar" style="background:var(--green)">TA</span></td><td><span class="status-pill done">Terminé</span></td></tr>
+      </table>
+    </div></div>
+  </div>
+
+  <div id="dept-mkt" class="dept-content">
+    <div class="mockup"><div class="mockup-bar"><span class="mockup-dot r"></span><span class="mockup-dot y"></span><span class="mockup-dot g"></span></div>
+    <div class="mockup-body" style="padding:0">
+      <table class="board-mock">
+        <tr><th>📋 Board : Campagnes Marketing</th><th>Statut</th><th>Équipe</th><th>Budget</th></tr>
+        <tr class="group-row"><td colspan="4">📁 Q2 2026</td></tr>
+        <tr><td>Campagne LinkedIn Ads</td><td><span class="status-pill working">En cours</span></td><td><span class="avatar" style="background:var(--primary)">CM</span><span class="avatar" style="background:var(--orange)">DG</span></td><td>5 000 €</td></tr>
+        <tr><td>Newsletter mensuelle</td><td><span class="status-pill done">Envoyé</span></td><td><span class="avatar" style="background:var(--green)">SL</span></td><td>500 €</td></tr>
+        <tr><td>Vidéo produit</td><td><span class="status-pill stuck">Bloqué</span></td><td><span class="avatar" style="background:var(--red)">PV</span></td><td>8 000 €</td></tr>
+      </table>
+    </div></div>
+  </div>
+</section>
+
+<!-- ========== 9. ERREURS FRÉQUENTES ========== -->
+<section class="section" id="erreurs">
+  <div class="section-badge">⚠️ Section 9</div>
+  <h2 class="section-title">Erreurs fréquentes des débutants</h2>
+  <p class="section-desc">Évitez ces pièges courants pour une expérience réussie dès le premier jour.</p>
+
+  <div class="compare reveal">
+    <div class="compare-col bad">
+      <div class="compare-header">❌ À ÉVITER</div>
+      <div class="compare-item">🚫 Créer un board par tâche (trop de boards)</div>
+      <div class="compare-item">🚫 Noms vagues : « Board 1 », « Projet X »</div>
+      <div class="compare-item">🚫 15 statuts différents par board</div>
+      <div class="compare-item">🚫 Automatisations complexes dès le début</div>
+      <div class="compare-item">🚫 Ne pas assigner de responsable</div>
+      <div class="compare-item">🚫 Tout mettre dans un seul groupe</div>
+      <div class="compare-item">🚫 Ignorer les permissions des boards</div>
+    </div>
+    <div class="compare-col good">
+      <div class="compare-header">✅ BONNE PRATIQUE</div>
+      <div class="compare-item">✅ Un board par projet, des groupes par phase</div>
+      <div class="compare-item">✅ Noms clairs : « Marketing Q2 2026 »</div>
+      <div class="compare-item">✅ 4-5 statuts max : À faire, En cours, Review, Terminé</div>
+      <div class="compare-item">✅ Commencer par 2-3 automatisations simples</div>
+      <div class="compare-item">✅ Toujours assigner un responsable unique</div>
+      <div class="compare-item">✅ Utiliser des groupes pour organiser</div>
+      <div class="compare-item">✅ Boards privés pour les données sensibles (RH, Finance)</div>
+    </div>
+  </div>
+
+  <div class="callout orange reveal">⚡ <strong>Règle d'or :</strong> Commencez simple. Vous pourrez toujours ajouter de la complexité plus tard. Un board clair et simple sera toujours plus efficace qu'un board complexe et confus.</div>
+</section>
+
+<!-- ========== 10. CHEAT SHEET ========== -->
+<section class="section" id="cheat">
+  <div class="section-badge">📋 Section 10</div>
+  <h2 class="section-title">Résumé rapide — Cheat Sheet</h2>
+  <p class="section-desc">Tout ce qu'il faut retenir sur une seule page. Imprimez-la et gardez-la à portée de main !</p>
+
+  <button id="print-btn" style="background:var(--primary);color:white;border:none;padding:12px 28px;border-radius:30px;font-weight:700;font-size:0.9rem;cursor:pointer;margin-bottom:28px;transition:var(--transition)">🖨️ Imprimer cette page</button>
+
+  <h3 style="font-size:1rem;font-weight:700;margin-bottom:12px">📖 Termes essentiels</h3>
+  <div class="cheat-grid reveal">
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--purple-light)">🏢</div><div><div class="cheat-label">Workspace</div><div class="cheat-val">Espace de travail = dossier principal</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--blue-light)">📊</div><div><div class="cheat-label">Board</div><div class="cheat-val">Tableau = votre projet</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--green-light)">📁</div><div><div class="cheat-label">Group</div><div class="cheat-val">Groupe = section du tableau</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--orange-light)">✅</div><div><div class="cheat-label">Item</div><div class="cheat-val">Élément = une tâche</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--red-light)">🔗</div><div><div class="cheat-label">Subitem</div><div class="cheat-val">Sous-tâche d'un item</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--purple-light)">📐</div><div><div class="cheat-label">Column</div><div class="cheat-val">Colonne = info liée à la tâche</div></div></div>
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;margin:28px 0 12px">🚀 Ordre de configuration recommandé</h3>
+  <div class="cheat-grid reveal">
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--purple-light)">1️⃣</div><div><div class="cheat-label">Créer le Workspace</div><div class="cheat-val">Nommez-le par département ou projet</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--blue-light)">2️⃣</div><div><div class="cheat-label">Créer le Board</div><div class="cheat-val">Un board = un projet</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--green-light)">3️⃣</div><div><div class="cheat-label">Ajouter les Groupes</div><div class="cheat-val">Par phase, mois ou catégorie</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--orange-light)">4️⃣</div><div><div class="cheat-label">Ajouter les Items</div><div class="cheat-val">Une ligne = une tâche</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--red-light)">5️⃣</div><div><div class="cheat-label">Assigner + Dates</div><div class="cheat-val">Qui fait quoi et quand</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--purple-light)">6️⃣</div><div><div class="cheat-label">Automatiser</div><div class="cheat-val">2-3 automatisations simples</div></div></div>
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;margin:28px 0 12px">✅ Bonnes pratiques</h3>
+  <div class="cheat-grid reveal">
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--green-light)">💡</div><div><div class="cheat-label">Noms clairs</div><div class="cheat-val">« Marketing Q2 2026 » plutôt que « Board 1 »</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--green-light)">💡</div><div><div class="cheat-label">4-5 statuts max</div><div class="cheat-val">À faire · En cours · Review · Terminé</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--green-light)">💡</div><div><div class="cheat-label">1 responsable par tâche</div><div class="cheat-val">Évitez d'assigner plusieurs personnes</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--green-light)">💡</div><div><div class="cheat-label">Mettre à jour les statuts</div><div class="cheat-val">Chaque jour, mettez à jour vos tâches</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--green-light)">💡</div><div><div class="cheat-label">Utiliser les Updates</div><div class="cheat-val">Communiquez dans le contexte de la tâche</div></div></div>
+    <div class="cheat-item"><div class="cheat-icon" style="background:var(--green-light)">💡</div><div><div class="cheat-label">Dashboard pour les managers</div><div class="cheat-val">Vue d'ensemble sans ouvrir chaque board</div></div></div>
+  </div>
+
+  <div class="callout green reveal" style="margin-top:32px;text-align:center;font-size:1.1rem">
+    🎉 <strong>Félicitations !</strong> Vous avez tout ce qu'il faut pour démarrer avec monday.com.<br>
+    Commencez simple, explorez progressivement, et n'hésitez pas à demander de l'aide !
+  </div>
+</section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
