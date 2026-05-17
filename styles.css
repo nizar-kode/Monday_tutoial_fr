@@ -235,6 +235,7 @@ body {
 }
 .step:nth-child(even) { direction: rtl; }
 .step:nth-child(even) > * { direction: ltr; }
+.step > * { min-width: 0; overflow: hidden; } /* prevent children from overflowing grid */
 .step-content {}
 .step-num {
   display: inline-flex; align-items: center; justify-content: center;
@@ -318,7 +319,7 @@ body {
 .mockup-dot.r { background: #E2445C; }
 .mockup-dot.y { background: #FDAB3D; }
 .mockup-dot.g { background: #00CA72; }
-.mockup-body { padding: 0; }
+.mockup-body { padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .mockup-body img { width: 100%; display: block; }
 
 /* ===== TABLE MOCKUP ===== */
@@ -510,9 +511,9 @@ body {
   .mockup { margin: 16px 0; border-radius: 12px; }
   .mockup-body { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
-  /* Tables — horizontal scroll */
-  .board-mock { min-width: 480px; font-size: 0.78rem; }
-  .board-mock th { padding: 10px 12px; font-size: 0.72rem; }
+  /* Tables — horizontal scroll inside mockup-body */
+  .board-mock { min-width: 0; width: max-content; font-size: 0.78rem; }
+  .board-mock th { padding: 10px 12px; font-size: 0.72rem; white-space: nowrap; }
   .board-mock td { padding: 10px 12px; white-space: nowrap; }
   .status-pill { min-width: 80px; font-size: 0.72rem; padding: 3px 10px; }
   .avatar { width: 24px; height: 24px; font-size: 0.6rem; }
@@ -616,7 +617,7 @@ body {
   .step-title { font-size: 1rem; }
   .step-text { font-size: 0.82rem; }
 
-  .board-mock { min-width: 420px; font-size: 0.72rem; }
+  .board-mock { min-width: 0; width: max-content; font-size: 0.72rem; }
 
   .compare-col { padding: 16px 12px; }
   .compare-header { font-size: 0.92rem; }
