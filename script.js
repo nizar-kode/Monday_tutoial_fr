@@ -27,8 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const target = document.getElementById(a.dataset.section);
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Close mobile menu on nav click
+      const nl = document.getElementById('nav-links');
+      if (nl) nl.classList.remove('open');
     });
   });
+
+  // ===== Hamburger toggle (mobile) =====
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinksEl = document.getElementById('nav-links');
+  if (navToggle && navLinksEl) {
+    navToggle.addEventListener('click', () => {
+      navLinksEl.classList.toggle('open');
+    });
+  }
 
   // ===== Reveal on scroll =====
   const reveals = document.querySelectorAll('.reveal');

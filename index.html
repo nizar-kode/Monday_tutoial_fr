@@ -9,9 +9,17 @@
 <body>
 
 <!-- NAV -->
-<nav class="nav">
-  <div class="nav-logo"><span>monday</span>.com</div>
-  <div class="nav-sub">Guide d'onboarding</div>
+<nav class="nav" id="main-nav">
+  <div class="nav-header">
+    <div>
+      <div class="nav-logo"><span>monday</span>.com</div>
+      <div class="nav-sub">Guide d'onboarding</div>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-links" id="nav-links">
   <a href="#intro" data-section="intro"><span class="nav-num">1</span> Introduction</a>
   <a href="#glossaire" data-section="glossaire"><span class="nav-num">2</span> Terminologie</a>
   <a href="#hierarchie" data-section="hierarchie"><span class="nav-num">3</span> Hiérarchie</a>
@@ -22,6 +30,7 @@
   <a href="#exemple" data-section="exemple"><span class="nav-num">8</span> Exemple réel</a>
   <a href="#erreurs" data-section="erreurs"><span class="nav-num">9</span> Erreurs fréquentes</a>
   <a href="#cheat" data-section="cheat"><span class="nav-num">10</span> Résumé rapide</a>
+  </div><!-- /.nav-links -->
   <div class="nav-progress">
     <div class="nav-progress-label">Progression</div>
     <div class="nav-progress-bar"><div class="nav-progress-fill"></div></div>

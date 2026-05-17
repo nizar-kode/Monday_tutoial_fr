@@ -50,6 +50,20 @@ body {
   overflow-y: auto;
   transition: var(--transition);
 }
+.nav-header {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-toggle {
+  display: none; /* hidden on desktop */
+  background: none; border: none; cursor: pointer;
+  flex-direction: column; gap: 5px; padding: 8px;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 2px;
+  background: var(--white); border-radius: 2px;
+  transition: var(--transition);
+}
+.nav-links { display: contents; } /* on desktop, acts as if not there */
 .nav-logo {
   font-size: 1.1rem; font-weight: 800; color: var(--white);
   margin-bottom: 8px; letter-spacing: -0.3px;
@@ -387,18 +401,236 @@ body {
   .hero { background: var(--primary) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE — TABLETS (max 900px) ===== */
 @media (max-width: 900px) {
-  .nav { width: 100%; height: auto; position: relative; flex-direction: row; flex-wrap: wrap; padding: 16px; }
-  .nav a { font-size: 0.75rem; padding: 8px 10px; }
-  .main { margin-left: 0; }
-  .section { padding: 36px 20px 48px; }
-  .hero { padding: 48px 20px; border-radius: 0; }
-  .hero-grid { grid-template-columns: 1fr; }
-  .step { grid-template-columns: 1fr; }
+  /* Nav becomes a collapsible top bar */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    width: 100%; height: auto; max-height: 100vh;
+    flex-direction: column; flex-wrap: nowrap;
+    padding: 16px 20px;
+    overflow-y: auto;
+    z-index: 200;
+  }
+  .nav-logo { font-size: 1rem; }
+  .nav-sub { margin-bottom: 12px; }
+  .nav a { padding: 8px 12px; font-size: 0.78rem; }
+  .nav-progress { padding-top: 12px; }
+
+  .main { margin-left: 0; padding-top: 0; }
+  .section { padding: 36px 24px 48px; }
+  .hero { padding: 48px 24px; border-radius: 0; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero .section-title { font-size: 2rem; }
+  .hero .section-desc { font-size: 1rem; }
+
+  .section-title { font-size: 1.8rem; }
+  .section-desc { font-size: 0.95rem; }
+
+  .step { grid-template-columns: 1fr; gap: 20px; }
   .step:nth-child(even) { direction: ltr; }
   .compare { grid-template-columns: 1fr; }
-  .hero .section-title { font-size: 2rem; }
+  .glossary-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .views-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .cheat-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+
+  /* Hierarchy tree — reduce indentation */
+  .tree-level.l2 { margin-left: 24px; }
+  .tree-level.l3 { margin-left: 48px; }
+  .tree-level.l4 { margin-left: 72px; }
+  .tree-level.l5 { margin-left: 96px; }
+
+  .signature { padding: 32px 24px 48px; }
+}
+
+/* ===== RESPONSIVE — PHONES (max 768px) ===== */
+@media (max-width: 768px) {
+  html { font-size: 15px; }
+
+  /* Nav: compact vertical list with hamburger */
+  .nav {
+    position: relative;
+    padding: 14px 16px;
+    gap: 2px;
+  }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-links.open { display: flex; }
+  .nav-sub { margin-bottom: 8px; font-size: 0.65rem; }
+  .nav a {
+    padding: 9px 12px;
+    font-size: 0.76rem;
+    min-height: 40px; /* touch target */
+  }
+
+  .main { margin-left: 0; }
+  .section { padding: 28px 16px 40px; }
+
+  /* Hero */
+  .hero { padding: 36px 16px 40px; }
+  .hero .section-title { font-size: 1.65rem; }
+  .hero .section-desc { font-size: 0.92rem; }
+  .hero-cards { flex-direction: column; gap: 12px; }
+  .hero-card { min-width: unset; padding: 14px 18px; }
+  .hero-img { border-radius: 12px; }
+
+  /* Sections */
+  .section-title { font-size: 1.55rem; }
+  .section-desc { font-size: 0.9rem; margin-bottom: 28px; }
+  .section-badge { font-size: 0.68rem; padding: 5px 12px; }
+
+  /* Callouts */
+  .callout { padding: 18px 16px; font-size: 0.92rem; margin: 20px 0; }
+
+  /* Glossary */
+  .glossary-grid { grid-template-columns: 1fr; gap: 14px; }
+  .glossary-card { padding: 20px; }
+  .glossary-card:hover { transform: none; } /* disable hover lift on touch */
+  .glossary-term { font-size: 1rem; }
+  .glossary-def { font-size: 0.84rem; }
+
+  /* Steps */
+  .step { padding: 22px 18px; gap: 18px; }
+  .step-title { font-size: 1.05rem; }
+  .step-text { font-size: 0.85rem; }
+  .step-action { font-size: 0.78rem; padding: 8px 14px; }
+
+  /* Mockups — prevent overflow */
+  .mockup { margin: 16px 0; border-radius: 12px; }
+  .mockup-body { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* Tables — horizontal scroll */
+  .board-mock { min-width: 480px; font-size: 0.78rem; }
+  .board-mock th { padding: 10px 12px; font-size: 0.72rem; }
+  .board-mock td { padding: 10px 12px; white-space: nowrap; }
+  .status-pill { min-width: 80px; font-size: 0.72rem; padding: 3px 10px; }
+  .avatar { width: 24px; height: 24px; font-size: 0.6rem; }
+
+  /* Views */
+  .views-grid { grid-template-columns: 1fr; }
+  .view-card:hover { transform: none; }
+  .view-card-img { height: 140px; font-size: 2.4rem; }
+  .view-card-body { padding: 18px; }
+  .view-card-name { font-size: 1rem; }
+
+  /* Compare */
+  .compare { gap: 16px; }
+  .compare-col { padding: 20px 16px; }
+  .compare-header { font-size: 1rem; }
+  .compare-item { font-size: 0.82rem; }
+
+  /* Cheatsheet */
+  .cheat-grid { grid-template-columns: 1fr; gap: 10px; }
+  .cheat-item { padding: 16px; gap: 12px; }
+  .cheat-icon { width: 36px; height: 36px; font-size: 1rem; }
+  .cheat-label { font-size: 0.84rem; }
+  .cheat-val { font-size: 0.78rem; }
+
+  /* Department tabs — scrollable */
+  .dept-tabs { gap: 6px; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+  .dept-tab {
+    padding: 10px 18px; font-size: 0.8rem;
+    white-space: nowrap; flex-shrink: 0;
+    min-height: 44px; /* touch target */
+  }
+
+  /* Hierarchy tree */
+  .tree-level { padding: 12px 14px; gap: 12px; }
+  .tree-level .tree-icon { width: 36px; height: 36px; font-size: 1.1rem; }
+  .tree-label { font-size: 0.88rem; }
+  .tree-example { font-size: 0.75rem; }
+  .tree-level.l2 { margin-left: 16px; }
+  .tree-level.l3 { margin-left: 32px; }
+  .tree-level.l4 { margin-left: 48px; }
+  .tree-level.l5 { margin-left: 64px; }
+  .tree-arrow { left: -16px; font-size: 0.85rem; }
+
+  /* Automation blocks */
+  .auto-flow { padding: 16px; gap: 8px; flex-direction: column; align-items: stretch; }
+  .auto-block { min-width: unset; padding: 14px 18px; font-size: 0.85rem; }
+  .auto-arrow { transform: rotate(90deg); align-self: center; }
+
+  /* Images */
+  .annotated-img img { border-radius: 12px; }
+
+  /* Signature */
+  .signature { padding: 28px 16px 40px; }
+  .signature-content { gap: 14px; }
+  .signature-avatar { width: 44px; height: 44px; font-size: 0.95rem; }
+  .signature-name { font-size: 1.05rem; }
+  .signature-role, .signature-company { font-size: 0.8rem; }
+
+  /* Buttons — touch friendly */
+  #print-btn {
+    padding: 14px 32px;
+    font-size: 0.88rem;
+    min-height: 48px;
+    width: 100%;
+  }
+
+  /* Global overflow prevention */
+  body { overflow-x: hidden; }
+  img { max-width: 100%; height: auto; }
+}
+
+/* ===== RESPONSIVE — SMALL PHONES (max 480px) ===== */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+
+  .nav { padding: 12px 12px; }
+  .nav-logo { font-size: 0.9rem; }
+  .nav a { font-size: 0.72rem; padding: 8px 10px; }
+
+  .section { padding: 22px 12px 32px; }
+  .hero { padding: 28px 12px 32px; }
+  .hero .section-title { font-size: 1.4rem; }
+  .hero .section-desc { font-size: 0.85rem; }
+  .hero-card { padding: 12px 14px; }
+  .hero-card-title { font-size: 0.82rem; }
+  .hero-card-text { font-size: 0.72rem; }
+
+  .section-title { font-size: 1.35rem; }
+  .section-desc { font-size: 0.85rem; margin-bottom: 22px; }
+
+  .callout { padding: 14px 12px; font-size: 0.85rem; }
+
+  .glossary-card { padding: 16px; }
+  .glossary-icon { width: 40px; height: 40px; font-size: 1.2rem; margin-bottom: 12px; }
+  .glossary-term { font-size: 0.92rem; }
+  .glossary-def { font-size: 0.8rem; }
+  .glossary-example { padding: 8px 10px; font-size: 0.75rem; }
+
+  .step { padding: 18px 14px; }
+  .step-num { width: 32px; height: 32px; font-size: 0.8rem; }
+  .step-title { font-size: 1rem; }
+  .step-text { font-size: 0.82rem; }
+
+  .board-mock { min-width: 420px; font-size: 0.72rem; }
+
+  .compare-col { padding: 16px 12px; }
+  .compare-header { font-size: 0.92rem; }
+  .compare-item { font-size: 0.78rem; }
+
+  .tree-level.l2 { margin-left: 12px; }
+  .tree-level.l3 { margin-left: 24px; }
+  .tree-level.l4 { margin-left: 36px; }
+  .tree-level.l5 { margin-left: 48px; }
+  .tree-level .tree-icon { width: 32px; height: 32px; font-size: 1rem; }
+  .tree-label { font-size: 0.82rem; }
+  .tree-example { font-size: 0.72rem; }
+
+  .auto-block { padding: 12px 14px; font-size: 0.8rem; }
+
+  .dept-tab { padding: 8px 14px; font-size: 0.75rem; min-height: 40px; }
+
+  .signature-avatar { width: 40px; height: 40px; font-size: 0.85rem; }
+  .signature-name { font-size: 0.95rem; }
+  .signature-role, .signature-company { font-size: 0.75rem; }
+  .signature-date { font-size: 0.7rem; }
 }
 
 /* ===== SCROLL ANIMATIONS ===== */
