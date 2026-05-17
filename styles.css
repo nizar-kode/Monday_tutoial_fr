@@ -449,7 +449,8 @@ body {
 
   /* Nav: compact vertical list with hamburger */
   .nav {
-    position: relative;
+    position: sticky;
+    top: 0;
     padding: 14px 16px;
     gap: 2px;
   }
