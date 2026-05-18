@@ -92,6 +92,26 @@ body {
 .nav-progress-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
 .nav-progress-fill { height: 100%; background: var(--primary); border-radius: 4px; transition: width 0.5s ease; width: 0%; }
 
+.nav-author {
+  display: flex; align-items: center; gap: 10px;
+  margin-top: 20px; padding: 12px 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+}
+.nav-author-avatar {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(97,97,255,0.4);
+}
+.nav-author-name { font-size: 0.78rem; font-weight: 700; color: #fff; line-height: 1.2; }
+.nav-author-role { font-size: 0.65rem; color: var(--grey-2); font-weight: 400; margin-top: 2px; }
+
+/* Signature footer hidden on desktop — name already in nav sidebar */
+.signature { display: none; }
+
 /* ===== MAIN ===== */
 .main { margin-left: 260px; min-height: 100vh; }
 
@@ -479,6 +499,8 @@ body {
     font-size: 0.76rem;
     min-height: 40px;
   }
+  .nav-author { display: none; }
+  .signature { display: block; }
 
   /* === MAIN CONTAINER === */
   .main {
